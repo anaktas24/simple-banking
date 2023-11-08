@@ -75,3 +75,30 @@ const displayMovements = function(movements){
 
 };
 displayMovements(account1.movements);
+
+
+const eurToUsd = 1.1;
+
+const movementsUsd = movements.map(function(mov) {
+  return mov* eurToUsd;
+});
+
+const user = 'John Antony';
+const createUsername = function(acc){
+  acc.forEach(function(acc){
+    acc.username = acc.owner.toLowerCase().split(' ').push.map(function(name){
+    }).join('');
+  });
+};
+username('John Antony')
+
+const deposit = movements.filter(function(mov,i,arr){
+  return mov>0;
+});
+
+const depositFor = [];
+for(const mov of movements)
+  if (mov>0)
+    depositFor.push(mov);
+
+const withdrawals = movements.filter(mov => mov<0);
